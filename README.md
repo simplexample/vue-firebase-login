@@ -1,27 +1,41 @@
-# first-firebase-app
+# Vue Firebase Login
 
 > A Vue/Firebase app
 
-## Build Setup
+## Getting started
 
+#### install dependencies
 ``` bash
-# install dependencies
 npm install
+```
 
-# serve with hot reload at localhost:8080
+#### Setup Firebase
+- setup your own firebase app via the [console](https://console.firebase.google.com)
+- click "Add Firebase to your web app"
+- create a `secrets.js` file in the root of the project
+- copy/paste below into `secrets.js` and replace <br/> `xxx` with what you have from firebase
+  ``` bash
+  const FIREBASE_CONFIG = {
+    apiKey: 'xxx',
+    authDomain: 'xxx',
+    databaseURL: 'xxx',
+    projectId: 'xxx',
+    storageBucket: 'xxx',
+    messagingSenderId: 'xxx'
+  }
+
+  export {
+    FIREBASE_CONFIG
+  }
+
+  ```
+
+#### Dev & Build scripts
+``` bash
+# run project @ localhost:8080
+# (also exposes YOUR_IP:8080 on your network)
 npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
